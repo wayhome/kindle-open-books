@@ -21,10 +21,10 @@ class Forecasting_Principles_and_Practice(BasicNewsRecipe):
         return ' '.join(title)
 
     def parse_index(self):
-        soup = self.index_to_soup('http://otexts.com/fpp/')
+        soup = self.index_to_soup('https://otexts.com/fpp2/')
 
         articles = []
-        for li in soup.findAll('li', { 'class': re.compile('^page_item') }):
+        for li in soup.findAll('li', { 'class': re.compile('^chapter') }):
             link = li.find('a')
             title = self.get_title(link) 
             url = link['href']
