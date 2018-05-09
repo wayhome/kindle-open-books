@@ -8,7 +8,7 @@ class Forecasting_Principles_and_Practice(BasicNewsRecipe):
     description = ''
 
     no_stylesheets = True
-    keep_only_tags = [{ 'id': re.compile('^post-') }]
+    keep_only_tags = [{ 'id': re.compile('^book-') }]
 
     def get_title(self, link):
         title = []
